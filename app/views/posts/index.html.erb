@@ -1,4 +1,6 @@
-<h1>Reasons each as individual posts</h1>
+<h1>List of Reasons</h1>
+
+<%= link_to "Home", home_index %>
 
 <table>
   <thead>
@@ -15,10 +17,10 @@
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
-        <td><%= post.content %></td>
+        <td><%= post.content %><br /><br /></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
