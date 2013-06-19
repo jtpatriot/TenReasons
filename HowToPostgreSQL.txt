@@ -1,0 +1,13 @@
+PostgreSQL How To
+
+---[ Create a table ]---
+CREATE TABLE contact
+(
+id int,
+first_name varchar(30),
+last_name varchar(30),
+contact varchar(15)
+);
+
+CREATE TABLE <name> (column_name type, column2_name type, column3_name type);
+
