@@ -11,3 +11,31 @@ contact varchar(15)
 
 CREATE TABLE <name> (column_name type, column2_name type, column3_name type);
 
+
+
+
+---[ Insert values ]---
+INSERT INTO contact values
+(
+1, 'Jarrett','Tilford','8005550075'
+);
+
+insert into contact values (1,'Jarrett','Tilford','8005550075');
+
+
+
+
+---[ Select values ]---
+Syntax:
+SELECT <column list> FROM <tablename> WHERE <condition>
+
+"""
+select * from contact;
+
+Returns the following: 
+
+ id | first_name | last_name |  contact   
+----+------------+-----------+------------
+  1 | Jarrett    | Tilford   | 8005550075
+(1 row)
+"""
