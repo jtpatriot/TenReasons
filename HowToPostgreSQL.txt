@@ -73,7 +73,7 @@ New output of: select * from contact;
 
 
 
----[ Delete ]---
+---[ Delete rows ]---
 Syntax: DELETE FROM <table> where <condition>
 
 delete from contact where id = 3;
@@ -96,7 +96,16 @@ select * from contact;
 
 
 
+---[ Drop a table ]---
+Syntax: DROP TABLE <tablename>;
 
+drop table contact;
+
+Output: DROP TABLE
+
+select * from contact;
+
+Output: ERROR:  relation "contact" does not exist
 
 
 
