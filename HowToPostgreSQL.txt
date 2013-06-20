@@ -9,6 +9,8 @@ last_name varchar(30),
 contact varchar(15)
 );
 
+# Accidentally made the phone # field say "contact"
+
 CREATE TABLE <name> (column_name type, column2_name type, column3_name type);
 
 
@@ -38,4 +40,31 @@ Returns the following:
 ----+------------+-----------+------------
   1 | Jarrett    | Tilford   | 8005550075
 (1 row)
+
+###
+
+select first_name, last_name from contact; 
+
+Returns this:
+
+ first_name | last_name 
+------------+-----------
+ Jarrett    | Tilford
 """
+
+
+
+ id | first_name | last_name |  contact   
+----+------------+-----------+------------
+  1 | Jarrett    | Tilford   | 8005550075
+  2 | Larry      | Page      | 9051234030
+  3 | Bill       | Gates     | 9051238030
+
+
+update contact set contact = '6215550075' where id = 1;
+
+
+
+
+
+
