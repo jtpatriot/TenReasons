@@ -85,6 +85,33 @@ select * from contact;
   2 | Larry      | Page      | 9051234030
   1 | Jarrett    | Tilford   | 6215550075
 
+delete from contact;
+
+select * from contact;
+
+ id | first_name | last_name | contact 
+----+------------+-----------+---------
+(0 rows)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
