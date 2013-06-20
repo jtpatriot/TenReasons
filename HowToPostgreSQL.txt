@@ -53,6 +53,7 @@ Returns this:
 """
 
 
+---[ Update values ]---
 
  id | first_name | last_name |  contact   
 ----+------------+-----------+------------
@@ -60,8 +61,33 @@ Returns this:
   2 | Larry      | Page      | 9051234030
   3 | Bill       | Gates     | 9051238030
 
-
 update contact set contact = '6215550075' where id = 1;
+
+New output of: select * from contact;
+ id | first_name | last_name |  contact   
+----+------------+-----------+------------
+  2 | Larry      | Page      | 9051234030
+  3 | Bill       | Gates     | 9051238030
+  1 | Jarrett    | Tilford   | 6215550075
+
+
+
+
+---[ Delete ]---
+Syntax: DELETE FROM <table> where <condition>
+
+delete from contact where id = 3;
+
+select * from contact;
+
+ id | first_name | last_name |  contact   
+----+------------+-----------+------------
+  2 | Larry      | Page      | 9051234030
+  1 | Jarrett    | Tilford   | 6215550075
+
+
+
+
 
 
 
