@@ -1,6 +1,10 @@
-PostgreSQL How To
++-------------------+
+| PostgreSQL How To |
++-------------------+
 
----[ Create a table ]---
+
+
+[---[ Create a table ]-------------------------]
 CREATE TABLE contact
 (
 id int,
@@ -12,48 +16,43 @@ contact varchar(15)
 # Accidentally made the phone # field say "contact"
 
 CREATE TABLE <name> (column_name type, column2_name type, column3_name type);
+[----------------------------------------------]
 
 
 
-
----[ Insert values ]---
+[---[ Insert values ]--------------------------]
 INSERT INTO contact values
 (
 1, 'Jarrett','Tilford','8005550075'
 );
 
 insert into contact values (1,'Jarrett','Tilford','8005550075');
+[----------------------------------------------]
 
 
 
-
----[ Select values ]---
+[---[ Select values ]--------------------------]
 Syntax:
 SELECT <column list> FROM <tablename> WHERE <condition>
 
-"""
 select * from contact;
-
-Returns the following: 
 
  id | first_name | last_name |  contact   
 ----+------------+-----------+------------
   1 | Jarrett    | Tilford   | 8005550075
 (1 row)
 
-###
-
 select first_name, last_name from contact; 
-
-Returns this:
 
  first_name | last_name 
 ------------+-----------
  Jarrett    | Tilford
 """
+[----------------------------------------------]
 
 
----[ Update values ]---
+
+[---[ Update values ]--------------------------]
 
  id | first_name | last_name |  contact   
 ----+------------+-----------+------------
@@ -70,10 +69,11 @@ New output of: select * from contact;
   3 | Bill       | Gates     | 9051238030
   1 | Jarrett    | Tilford   | 6215550075
 
+[----------------------------------------------]
 
 
 
----[ Delete rows ]---
+[---[ Delete rows ]----------------------------]
 Syntax: DELETE FROM <table> where <condition>
 
 delete from contact where id = 3;
@@ -93,10 +93,11 @@ select * from contact;
 ----+------------+-----------+---------
 (0 rows)
 
+[----------------------------------------------]
 
 
 
----[ Drop a table ]---
+[---[ Drop a table ]---------------------------]
 Syntax: DROP TABLE <tablename>;
 
 drop table contact;
@@ -106,6 +107,7 @@ Output: DROP TABLE
 select * from contact;
 
 Output: ERROR:  relation "contact" does not exist
+[----------------------------------------------]
 
 
 
