@@ -116,9 +116,18 @@ Output: ERROR:  relation "contact" does not exist
 
 
 
+[---------------------------[ Conditions ]-----------------------------]
+CONDITION = EXPRESSION + OPERATOR + EXPRESSION
+Result of the above is either TRUE/FALSE
+
+Example: ID > 12
+ID = expression
+Greater Than = operator
+12 = expression
 
 
 
+[----------------------------------------------------------------------]
 
 
 
