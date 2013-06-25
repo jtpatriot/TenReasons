@@ -124,16 +124,25 @@ Example: ID > 12
 ID = expression
 Greater Than = operator
 12 = expression
-
-
-
 [----------------------------------------------------------------------]
 
 
 
+[-----------------------[ Logical Operators ]--------------------------]
+CONDITION + OPERATOR + CONDITION
 
+Operator can be AND or OR.
 
+TRUE AND TRUE = TRUE
+TRUE AND FALSE = FALSE
+FALSE AND TRUE = FALSE
+FALSE AND FALSE = FALSE
 
+TRUE OR TRUE = TRUE
+TRUE OR FALSE = TRUE
+FALSE OR TRUE = TRUE
+FALSE OR FALSE = FALSE
+[----------------------------------------------------------------------]
 
 
 

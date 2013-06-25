@@ -1,0 +1,231 @@
++-------------+
+| Ruby How To |
++-------------+
+
+Start ruby with:
+$ ruby
+
+
+[--------------------------[ Object Oriented ]-------------------------]
+  variable1 = Class.new("Parameters")
+  song1 = Song.new("Ruby Tuesday")
+
+An object is a "class instance"
+
+Classes, methods, and variables are objects.
+[----------------------------------------------------------------------]
+
+
+
+[-----------------------------[ Functions ]----------------------------]
+  def function_name(input)
+    variable2 = "String stuff. " + input
+    return variable2
+  end
+  puts function_name("Interesting, right?")
+
+produces:
+  
+  String stuff. Interesting, right?
+
+Always include "end" to end the definition of a function or an if/then,
+etc.
+Very clean syntax.
+[----------------------------------------------------------------------]
+
+
+
+[------------------------------[ Quotes ]------------------------------]
+Single quotes are simple, with little processing. With few exceptions,
+what you type into the string literal becomes the string's value.
+
+As for double-quotes, Ruby does more work. First, it looks for
+substitutions--sequences that start with a backslash character--and
+replaces them with some binary value. The most common of these is \n,
+which is replaced with a newline character. When a string containing
+a newline is output, the \n forces a line break.
+
+  puts "And good night, \nGrandma"
+
+produces:
+
+  And good night,
+  Grandma
+
+The second thing that Ruby does with double-quoted strings is expression
+interpolation. Within the string, the sequence #{expression} is replaced
+by the value of "expression". We could use this to rewrite the previous
+method.
+
+  def function_name(input)
+    variable2 = "String stuff. #{input}"
+    return variable2
+  end
+  puts function_name("Interestng, right?")
+
+produces:
+  
+  String stuff. Interesting, right?
+[----------------------------------------------------------------------]
+
+
+
+[------------------------[ Arrays and Hashes ]-------------------------]
+Ruby's arrays and hashes are indexed collections. Both store collections
+of objects, accessible using a key. With arrays, the key is an integer,
+whereas hashes support any object as a key.
+
+  a = [ 1, 'cat', 3.14 ]  # array with three elements
+  # access the first element
+  a[0]   --> 1
+  # set the third element
+  a[2] = nil
+  # dump out the array
+  a      -->  [1, "cat", nil]
+
+nil (or null) usually means "no object." In Ruby, nil is an object, just
+like any other, that happens to represent nothing.
+
+%w shortcut:
+  a = [ 'ant', 'bee', 'cat', 'dog', 'elk' ]
+  # this is the same
+  a = %w{ ant bee cat dog elk }
+
+Ruby hashes are similar to arrays. Braces instead of brackets.
+
+  inst_section = {
+    'cello'     => 'string',
+    'clarinet'  => 'woodwind',
+    'drum'      => 'percussion',
+    'oboe'      => 'woodwind',
+    'trumpet'   => 'brass',
+    'violin'    => 'string'
+  }
+
+  inst_section['oboe']     -->  "woodwind"
+  inst_section['cello']    -->  "string"
+[----------------------------------------------------------------------]
+
+
+
+[-----------------------[ Control Structures ]-------------------------]
+"if" and "while" loops.
+Always include "end" to signify the end of a body.
+
+  if count > 10
+    puts "Try again"
+  elsif tries == 3
+    puts "You lose"
+  else
+    puts "Enter a number"
+  end
+
+Similarly, "while" statements are teminated with end.
+
+  while weight < 100 and num_pallets <= 30
+    pallet = next_pallet()
+    weight += pallet.weight
+    num_pallets += 1
+  end
+
+[----------------------------------------------------------------------]
+
+
+
+[----------------------[ Regular Expressions ]-------------------------]
+A regular expression is a way of specifying a pattern of characters to
+be matched in a string.
+  /pattern/
+Regular expressions are objects and can be manipulated as such.
+
+For example, you could write a patten that matches a string containing
+the text "Perl" or the text "Python" using the following regular
+expression.
+
+  /Perl|Python/
+
+Also could be:
+
+  /P(erl|ython)/
+
+Many more, page 20 of Programming Ruby by Dave Thomas.
+[----------------------------------------------------------------------]
+
+
+
+[----------------------[ Blocks and Iterators ]------------------------]
+  { puts "Hello" }      # this is a block
+  do                    ###
+    club.enroll(person)   # and so is this
+    person.socialize      #
+  end                   ###
+
+Once you've created a block, you can associate it with a call to a
+method. ... In the following code, the block containing 'puts "Hi"' is
+associated with the call to the method "greet."
+
+  greet  { puts "Hi" }
+
+If the method has parameters, they appear before the block.
+
+  verbose_greet("Dave", "loyal customer") { puts "Hi" }
+
+A method can then invoke an associated block one or more times using the
+Ruby "yield" statement. You can think of yield as being something like a
+method call that calls out to the block associated with the method
+containing the yield.
+
+  def call_block
+    puts "Start of method"
+    yield
+    yield
+    puts "End of method"
+  end
+  call_block { puts "In the block" }
+
+produces:
+
+  Start of method
+  In the block
+  In the block
+  End of method
+
+You can provide parameters to the call to yield: these will be passed
+to the block.
+
+  def call_block
+    yield("hello", 99)
+  end
+  call_block {|str, num| ... }
+
+#
+
+  animals = %w( ant bee cat dog elk )   # create an array
+  animals.each {|animal| puts animal }  # iterate over the contents
+
+produces:
+
+  ant
+  bee
+  cat
+  dog
+  elk
+[----------------------------------------------------------------------]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
