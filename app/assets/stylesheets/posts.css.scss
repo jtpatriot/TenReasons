@@ -6,10 +6,11 @@ body{background:#FFFFFF;}
 
 h1,h2,h3,h4,h5,h6{font-family: 'Lato',Helvetica,Arial,sans-serif; font-weight:300; color:#203870;}
 
-.HeaderBox{width:800px; height:40px; border-bottom: #203870 2px solid;}
+.HeaderBox{width:800px; height:60px; border-bottom: #203870 2px solid; margin-bottom:32px;}
 .HeaderText{float:left;}
+.HeaderText h1{font-size:3em;}
 
-.NavigateBar{float:right; height:32px;}
+.NavigateBar{float:right; height:32px; margin-top:20px;}
 .NavigateBar ul{list-style:none;}
 .NavigateBar li{display:block; float:left; width:100px; height:23px; 
     text-align:center; background:#ffffff; color:#203870;
