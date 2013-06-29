@@ -1,3 +1,24 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{background:#FFFFFF;}
+
+h1,h2,h3,h4,h5,h6{font-family: 'Lato',Helvetica,Arial,sans-serif; font-weight:300; color:#203870;}
+
+.HeaderBox{width:800px; height:40px; border-bottom: #203870 2px solid;}
+.HeaderText{float:left;}
+
+.NavigateBar{float:right; height:32px;}
+.NavigateBar ul{list-style:none;}
+.NavigateBar li{display:block; float:left; width:100px; height:23px; 
+    text-align:center; background:#ffffff; color:#203870;
+    font-family: 'Lato',Helvetica,Arial,sans-serif; font-weight:300;
+    padding-top:4px;
+}
+.NavigateBar li:hover{background:#203870; color:#ffffff}
+
+.Content{background:#FFFFFF; width:800px; margin:0px auto 16px auto; padding:16px 16px 16px 16px; clear:both;}
+.Content td{font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-weight:400; color:#000000;}
+
+.RightPadding{padding-right:48px;}

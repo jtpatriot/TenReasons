@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>TenReasons</title>
+  <link href='http://fonts.googleapis.com/css?family=Lato:300|Open+Sans' rel='stylesheet' type='text/css'>
+  <title>Ten Reasons</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body style="background: #EEEEEE;">
+<body>
 
-<div style="background: #FFFFFF; width: 800px; margin-left: auto; margin-right: auto; padding: 16px">
+<div class="Content">
 <%= yield %>
 </div>
 
