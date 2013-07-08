@@ -146,6 +146,146 @@ FALSE OR FALSE = FALSE
 
 
 
+[----------------------------[ Brackets ]------------------------------]
+select * from databasename
+where
+{dept = 10 and salary >= 2000}
+or
+{dept = 20 and salary >= 1500}
+;
+
+Mix and match the and/or operators.
+[----------------------------------------------------------------------]
+
+
+
+[----------------------[ IN / NOT IN Operator ]------------------------]
+COLUMN IN (VALUE1, VALUE2, VALUE3, ...);
+
+Instead of: where id = 2 or id = 3 or id = 44 or id = 66;
+  use this: where id in (2,3,44,66);
+[Both use select * from table]
+
+
+!in works with AND operators
+in works with OR operators
+[----------------------------------------------------------------------]
+
+
+
+
+
+[------------------------[ BETWEEN Operator ]--------------------------]
+COLUMN BETWEEN VALUE1 AND VALUE2         inclusive range, 9 to 19
+COLUMN NOT BETWEEN VALUE1 AND VALUE2     non-inclusive range, not 9-19
+
+Inclusive of VALUE1 and VALUE2
+
+    select * from contact
+    where id between 2 and 4;
+is the same as:
+    select * from contact
+    where id >= 2 and id <=4;
+
+
+    select * from contact
+    where id not between 2 and 4;
+is the same as:
+    select * from contact
+    where id < 2 or id > 4;
+
+Between is like an AND, Not Between is like an OR
+[----------------------------------------------------------------------]
+
+
+
+[------------------[ LIKE / NOT LIKE / Wild Cards ]--------------------]
+Matching Conditions
+
+COLUMN LIKE 'PATTERN'
+COLUMN NOT LIKE 'PATTERN'
+
+Use wild cards to write patterns. They work on text strings.
+
+Wild Cards: 
+  - %
+  - _
+
+Percentage means "this wild card matches a string of any length."
+  '%a' means "Any string ending with 'a' will match this pattern."
+
+Underscore means "this wild card matches only one character."
+  'a_' means "All the values that are two characters in length and start
+    with 'a' will match this condition."
+
+Could return any row where the name starts with Jarrett:
+    select * from contact
+    where name like 'Jarrett%';
+
+Could return any row where the name ends with Tilford:
+    select * from contact
+    where name like '%Tilford';
+
+Could return any row where the name ends with the letter d:
+    select * from contact
+    where name like '%d';
+
+Could return any row where the name contains ett anywhere within it:
+    select * from contact
+    where name like '%ett%';
+    
+    
+Could return any row where the name does not start with the letter J:
+    select * from contact
+    where name not like 'J%';
+
+Could return any row where the name does not end with n:
+    select * from contact
+    where name not like '%n';
+
+
+Could return any row where the name is not Jarrett Tilford, or any
+other last name that starts with 'Tilfo' like 'Tilfoxy':
+    select * from contact
+    where name not like 'Jarrett Tilfo__';
+[----------------------------------------------------------------------]
+
+
+
+[----------------------[ Comparison Conditions ]-----------------------]
+EXPRESSION > EXPRESSION
+EXPRESSION < EXPRESSION
+EXPRESSION >= EXPRESSION
+EXPRESSION <= EXPRESSION
+
+How to use these comparrisons on text values (text strings).
+
+with colums of 'salary' and 'previous_salary'
+
+Useful but unrelated statement: 
+    alter table employee add previous_salary number
+
+Call all records where the previous salary is more than the salary this
+year:
+    select * from employee where salary < previous_salary;
+
+Select all records where the name is greater than J, in alphabetical
+order:
+    select * from employee where name > 'K';
+[----------------------------------------------------------------------]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
