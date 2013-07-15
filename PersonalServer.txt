@@ -1,0 +1,1 @@
+Using Hamachi VPN, I have a server box hosted at home which up to 4 of my other devices can connect to. I figured out how to SSH into it pretty quickly, and I use it to host my own private file cloud. I was working on that over the past couple weeks.
