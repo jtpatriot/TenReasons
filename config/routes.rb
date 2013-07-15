@@ -2,8 +2,6 @@ TenReasons::Application.routes.draw do
   resources :posts
 
   get "home/index"
-  get "mains/index"
-  get "mains/new"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
