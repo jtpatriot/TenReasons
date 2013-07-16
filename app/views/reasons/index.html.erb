@@ -1,23 +1,21 @@
-<h1>Listing reasons</h1>
+<div class="HeaderBox">
+  <div class="HeaderText"><h1><%= "Ten Reasons" %></h1></div>
+  <div class="NavigateBar"><ul>
+    <a href="/"><li>Home</li></a>
+    <a href="/reasons/"><li>Reasons</li></a>
+    <li>Empty</li>
+  </ul></div>
+</div>
+
+<h1>Listing Entries</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Title</th>
-      <th>Reason1</th>
-      <th>Reason2</th>
-      <th>Reason3</th>
-      <th>Reason4</th>
-      <th>Reason5</th>
-      <th>Reason6</th>
-      <th>Reason7</th>
-      <th>Reason8</th>
-      <th>Reason9</th>
-      <th>Reason10</th>
-      <th></th>
-      <th></th>
+      <th width="100">Name</th>
+      <th width="40">Age</th>
+      <th width="200">Title</th>
+      <th>Reason 1</th>
       <th></th>
     </tr>
   </thead>
@@ -29,18 +27,7 @@
         <td><%= reason.age %></td>
         <td><%= reason.title %></td>
         <td><%= reason.reason1 %></td>
-        <td><%= reason.reason2 %></td>
-        <td><%= reason.reason3 %></td>
-        <td><%= reason.reason4 %></td>
-        <td><%= reason.reason5 %></td>
-        <td><%= reason.reason6 %></td>
-        <td><%= reason.reason7 %></td>
-        <td><%= reason.reason8 %></td>
-        <td><%= reason.reason9 %></td>
-        <td><%= reason.reason10 %></td>
-        <td><%= link_to 'Show', reason %></td>
-        <td><%= link_to 'Edit', edit_reason_path(reason) %></td>
-        <td><%= link_to 'Destroy', reason, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show All Reasons', reason %></td>
       </tr>
     <% end %>
   </tbody>

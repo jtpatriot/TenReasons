@@ -1,3 +1,12 @@
+<div class="HeaderBox">
+  <div class="HeaderText"><h1><%= "Ten Reasons" %></h1></div>
+  <div class="NavigateBar"><ul>
+    <a href="/"><li>Home</li></a>
+    <a href="/reasons/"><li>Reasons</li></a>
+    <li>Empty</li>
+  </ul></div>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -67,3 +76,4 @@
 
 <%= link_to 'Edit', edit_reason_path(@reason) %> |
 <%= link_to 'Back', reasons_path %>
+<%= link_to 'Delete', reason, method: :delete, data: { confirm: 'Are you sure?' } %>
