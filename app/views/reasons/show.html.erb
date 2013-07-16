@@ -75,5 +75,5 @@
 </p>
 
 <%= link_to 'Edit', edit_reason_path(@reason) %> |
-<%= link_to 'Back', reasons_path %>
-<%= link_to 'Delete', reason, method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Back', reasons_path %> |
+<%= link_to 'Delete', @reason, method: :delete, data: { confirm: 'Are you sure?' } %>
