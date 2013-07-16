@@ -1,6 +1,10 @@
 <div class="HeaderBox">
   <div class="HeaderText"><h1><%= @title %></h1></div>
-  <div class="NavigateBar"><ul><li>Navigate</li><li>Some</li><li>Places</li></ul></div>
+  <div class="NavigateBar"><ul>
+    <a href="/reasons/"><li>Reasons</li></a>
+    <li>Some</li>
+    <li>Places</li>
+  </ul></div>
 </div>
 
 <h1>Main</h1>
@@ -16,6 +20,27 @@
     <% @mains.each do |main| %>
       <tr>
         <td class="RightPadding"><%= main.body %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @reasons.each do |reason| %>
+      <tr>
+        <td class="RightPadding"><%= reason.name %></td>
+        <td><%= reason.title %></td>
       </tr>
     <% end %>
   </tbody>
