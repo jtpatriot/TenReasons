@@ -1,4 +1,6 @@
 TenReasons::Application.routes.draw do
+  resources :reasons
+
   resources :posts
 
   get "home/index"

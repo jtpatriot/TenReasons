@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  age: 1
+  title: MyString
+  reason1: MyText
+  reason2: MyText
+  reason3: MyText
+  reason4: MyText
+  reason5: MyText
+  reason6: MyText
+  reason7: MyText
+  reason8: MyText
+  reason9: MyText
+  reason10: MyText
+
+two:
+  name: MyString
+  age: 1
+  title: MyString
+  reason1: MyText
+  reason2: MyText
+  reason3: MyText
+  reason4: MyText
+  reason5: MyText
+  reason6: MyText
+  reason7: MyText
+  reason8: MyText
+  reason9: MyText
+  reason10: MyText
