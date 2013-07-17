@@ -69,15 +69,16 @@ puts say.upcase
 
 
 
-
+# Add the lib folder to the global load path.
+$LOAD_PATH << '~/Developer/TenReasons/Learning/lib'
 
 # Usually put requires at the top.
-require '~/Developer/TenReasons/Learning/MyRubyModule.rb'
+require 'MyRubyModule.rb'
 itemVariable = MyRubyModule::MyRubyTestClass.new
 
 # Could cause conflicts with other libraries when too many variables
 # are declared globally, so avoid 'include' where possible.
-require '~/Developer/TenReasons/Learning/MyRubyLibrary.rb'
+require 'MyRubyLibrary.rb'
 include MyRubyLibrary
 itemVariable2 = MyRubyLibTestClass.new
 
