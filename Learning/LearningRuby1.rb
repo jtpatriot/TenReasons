@@ -1,10 +1,13 @@
-puts "Hello World!"
+
+puts ""
+puts "Learning Program"
 
 def new_function_name()
   aGreatVariable = "Variables are great."
   puts aGreatVariable
 end
 
+puts ""
 def second_function(input)
   youGottaBeAVariable = "I will type and get this result: " + input
   return youGottaBeAVariable
@@ -19,6 +22,7 @@ takeInput = gets
 puts second_function(takeInput)
 
 
+puts ""
 
 # The Greeter class.
 class Greeter
@@ -38,6 +42,7 @@ g = Greeter.new("world")
 g.salute
 
 
+puts ""
 
 # Ruby knows what you mean, even if you
 # want to do math on an entire Array.
@@ -54,6 +59,7 @@ puts "I still need " +
      cities - visited
 
 
+puts ""
 
 # Output "I love Ruby"
 say = "I love Ruby"
@@ -65,9 +71,10 @@ puts say.upcase
 
 # Output "I *love* Ruby"
 # five times
-5.times { puts say }
+3.times { puts say }
 
 
+puts ""
 
 # Add the lib folder to the global load path.
 $LOAD_PATH << '~/Developer/TenReasons/Learning/lib'
@@ -82,6 +89,7 @@ require 'MyRubyLibrary.rb'
 include MyRubyLibrary
 itemVariable2 = MyRubyLibTestClass.new
 
+puts ""
 
 x = 0
 y = "You shall not pass!"
@@ -92,35 +100,54 @@ if x = MyRubyModule.pass(MyRubyModule::CAN_I_PASS)
 end
 
 
+puts ""
 
+require 'date'
+def days_until_wedding()
+  date_of_wedding = Date.new(2013,9,27)
+  date_today = Date.today()
+  julian_day_wedding = date_of_wedding.jd()
+  julian_day_today = date_today.jd()
+  
+  days_remaining = julian_day_wedding - julian_day_today
+  return days_remaining
+end
 
-wedding_message = "I'm going to be getting married on Sep 27th."
-options_message = "What would you like to know about the wedding?"
-options_list = "1) How many more days until the wedding?
-2)
-3)"
+def wedding_program_message1()
+	options_message = "---[ What would you like to know about the wedding? ]---"
+	options_array = [ 
+		"1) How many more days until the wedding?",
+		"2) What day is the wedding?",
+		"3) Should we postpone the wedding?",
+		"4) Exit program." ]
+	puts options_message
+	puts options_array
+end
 
-
-
-
-puts wedding_message
-puts options_message
-puts options_list
-options_choice = gets
-
-if options_choice = 1
-  puts "I'm going to make a function that gives you that information."
-elsif options_choice = 2
-  puts "What a useless thing to type. Can't you see there was no text after the 2?"
-elsif options_choice = 3
-  puts "3 doesn't have anything, either."
-else
-  puts "There's only 3 options. Use a number from 1 to 3."
+loop_the_program = 1
+while loop_the_program == 1
+	wedding_program_message1()
+	
+	options_choice = gets.to_i
+	
+	if options_choice == 1
+	  puts "Days until the wedding: " + days_until_wedding().to_s
+	elsif options_choice == 2
+	  puts "No function yet."
+	elsif options_choice == 3
+	  puts "No function yet."
+	elsif options_choice == 4
+	  loop_the_program = 0
+	else
+	  puts "There are only 4 options. Use a number from 1 to 4."
+	end
+	
+	puts ""
 end
 
 
 
-# I think I get most of the basics of functions and variables already. 
+
 
 
 
