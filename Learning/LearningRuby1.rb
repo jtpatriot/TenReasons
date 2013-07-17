@@ -83,8 +83,44 @@ include MyRubyLibrary
 itemVariable2 = MyRubyLibTestClass.new
 
 
+x = 0
+y = "You shall not pass!"
+
+# Apparently CAN_I_PASS cannot be lowercase...
+if x = MyRubyModule.pass(MyRubyModule::CAN_I_PASS)
+  puts y
+end
 
 
+
+
+wedding_message = "I'm going to be getting married on Sep 27th."
+options_message = "What would you like to know about the wedding?"
+options_list = "1) How many more days until the wedding?
+2)
+3)"
+
+
+
+
+puts wedding_message
+puts options_message
+puts options_list
+options_choice = gets
+
+if options_choice = 1
+  puts "I'm going to make a function that gives you that information."
+elsif options_choice = 2
+  puts "What a useless thing to type. Can't you see there was no text after the 2?"
+elsif options_choice = 3
+  puts "3 doesn't have anything, either."
+else
+  puts "There's only 3 options. Use a number from 1 to 3."
+end
+
+
+
+# I think I get most of the basics of functions and variables already. 
 
 
 
