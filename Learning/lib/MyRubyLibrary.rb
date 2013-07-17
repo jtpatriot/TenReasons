@@ -1,6 +1,4 @@
 module MyRubyLibrary
-
-  walkingMyCat = false
   
   class MyRubyLibTestClass
     def initialize

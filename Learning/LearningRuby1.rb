@@ -103,5 +103,3 @@ itemVariable2 = MyRubyLibTestClass.new
 
 
 
-
-

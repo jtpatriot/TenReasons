@@ -1,6 +1,4 @@
 module MyRubyModule
-
-  walkingMyDog = false
   
   class MyRubyTestClass
     def initialize
