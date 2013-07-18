@@ -1,1 +1,2 @@
 http://www.rubyfleebie.com/an-introduction-to-modules-part-1/
+http://www.devarticles.com/c/a/Ruby-on-Rails/Login-Systems-and-More-with-Ruby-on-Rails/

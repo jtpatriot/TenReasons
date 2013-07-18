@@ -1,4 +1,8 @@
 TenReasons::Application.routes.draw do
+  get "user/login"
+  get "user/process_login"
+  get "user/logout"
+  get "user/my_account"
   resources :reasons
 
   resources :posts
