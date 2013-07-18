@@ -121,14 +121,15 @@ def wedding(x)
 	wedding_location = "Stillwater Ranch"
 	
 	days_remaining = julian_day_wedding - julian_day_today
+	
 	if x == 1
-		return days_remaining
+		return "Days until the wedding: " + days_remaining.to_s
 	elsif x == 2
-		return date_of_wedding
+		return "The day of the wedding is: " + date_of_wedding.to_s
 	elsif x == 3
-		return wedding_location
-	else
-		return "Invalid results."
+		return "The location of the wedding will be: " + wedding_location
+	elsif x == 4
+		return "Exiting..."
 	end
 end
 
@@ -148,19 +149,14 @@ end
 loop_the_program = 1
 while loop_the_program == 1
 	wedding_program_message1()
-	
 	options_choice = gets.to_i
 	
-	if options_choice == 1
-	  puts "Days until the wedding: " + wedding(1).to_s
-	elsif options_choice == 2
-	  puts "The day of the wedding is: " + wedding(2).to_s
-	elsif options_choice == 3
-	  puts "The location of the wedding will be: " + wedding(3)
-	elsif options_choice == 4
+	puts wedding(options_choice)
+	
+	if options_choice == 4
 	  loop_the_program = 0
 	else
-	  puts "There are only 4 options. Use a number from 1 to 4."
+	  loop_the_program = 1
 	end
 	
 	puts ""
