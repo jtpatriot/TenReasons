@@ -4,21 +4,21 @@ puts "---[ Learning Program ]---"
 puts ""
 
 ##############################
-def new_function_name()
+def new_function1()
   aGreatVariable = "Variables are great."
   puts aGreatVariable
 end
-def second_function(input)
+def new_function2()
+  puts "Please type something:"
+  input = gets
   youGottaBeAVariable = "I will type and get this result: " + input
   return youGottaBeAVariable
 end
 
 # puts is like print in python, though I think print works as well.
 # also, comments seem to be the same, with pound symbols.
-new_function_name()
-puts "Please type something:"
-takeInput = gets
-puts second_function(takeInput)
+new_function1()
+# puts new_function2()
 puts ""
 
 
@@ -37,11 +37,11 @@ end
 # Create a new object
 g = Greeter.new("jarrett")
 
-# Output "Hello Jarrett!"
-g.salute
+# Output "Hello Jarrett!" (Disabled)
+# g.salute
 
 
-puts ""
+#puts ""
 
 
 ##############################
@@ -54,30 +54,30 @@ cities  = %w[ London
               Berlin ]
 visited = %w[Berlin Oslo]
 
-puts "I still need " +
-     "to visit the " +
-     "following cities:",
-     cities - visited
-
-
-puts ""
+# puts "I still need " +
+#      "to visit the " +
+#      "following cities:",
+#      cities - visited
+# 
+# 
+# puts ""
 
 
 ##############################
-# Output "I love Ruby"
-say = "I love Ruby"
-puts say
-
-# Output "I *LOVE* RUBY"
-say['love'] = "*love*"
-puts say.upcase
-
-# Output "I *love* Ruby"
-# five times
-3.times { puts say }
-
-
-puts ""
+# # Output "I love Ruby"
+# say = "I love Ruby"
+# puts say
+# 
+# # Output "I *LOVE* RUBY"
+# say['love'] = "*love*"
+# puts say.upcase
+# 
+# # Output "I *love* Ruby"
+# # five times
+# 3.times { puts say }
+# 
+# 
+# puts ""
 
 
 ##############################
@@ -148,15 +148,16 @@ def wedding_program_message1()
 end
 
 
-loop_the_program = 1
-while loop_the_program == 1
+program_loop = 1
+while program_loop == 1
+	
 	wedding_program_message1()
-	options_choice = gets.to_i
+	choice = gets.to_i
 	
-	puts wedding(options_choice)
+	puts wedding(choice)
 	
-	if options_choice == 4
-	  loop_the_program = 0
+	if choice == 4
+	  program_loop = 0
 	end
 	
 	puts ""
