@@ -130,6 +130,8 @@ def wedding(x)
 		return "The location of the wedding will be: " + wedding_location
 	elsif x == 4
 		return "Exiting..."
+	else
+		return "Please make a valid selection."
 	end
 end
 
@@ -148,6 +150,8 @@ def wedding_program_message1()
 end
 
 
+
+
 program_loop = 1
 while program_loop == 1
 	
@@ -160,6 +164,8 @@ while program_loop == 1
 	  program_loop = 0
 	end
 	
+	puts "--------------------------------------------------------"
+	puts ""
 	puts ""
 end
 
