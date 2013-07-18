@@ -1,29 +1,28 @@
 
 puts ""
-puts "Learning Program"
+puts "---[ Learning Program ]---"
+puts ""
 
+##############################
 def new_function_name()
   aGreatVariable = "Variables are great."
   puts aGreatVariable
 end
-
-puts ""
 def second_function(input)
   youGottaBeAVariable = "I will type and get this result: " + input
   return youGottaBeAVariable
 end
 
-new_function_name()
-
 # puts is like print in python, though I think print works as well.
 # also, comments seem to be the same, with pound symbols.
+new_function_name()
 puts "Please type something:"
 takeInput = gets
 puts second_function(takeInput)
-
-
 puts ""
 
+
+##############################
 # The Greeter class.
 class Greeter
   def initialize(name)
@@ -36,14 +35,16 @@ class Greeter
 end
 
 # Create a new object
-g = Greeter.new("world")
+g = Greeter.new("jarrett")
 
-# Output "Hello World!"
+# Output "Hello Jarrett!"
 g.salute
 
 
 puts ""
 
+
+##############################
 # Ruby knows what you mean, even if you
 # want to do math on an entire Array.
 cities  = %w[ London
@@ -61,6 +62,8 @@ puts "I still need " +
 
 puts ""
 
+
+##############################
 # Output "I love Ruby"
 say = "I love Ruby"
 puts say
@@ -76,6 +79,8 @@ puts say.upcase
 
 puts ""
 
+
+##############################
 # Add the lib folder to the global load path.
 $LOAD_PATH << '~/Developer/TenReasons/Learning/lib'
 
@@ -89,8 +94,11 @@ require 'MyRubyLibrary.rb'
 include MyRubyLibrary
 itemVariable2 = MyRubyLibTestClass.new
 
+
 puts ""
 
+
+##############################
 x = 0
 y = "You shall not pass!"
 
@@ -102,6 +110,8 @@ end
 
 puts ""
 
+
+##############################
 require 'date'
 def wedding(x)
 	date_of_wedding = Date.new(2013,9,27)
