@@ -103,26 +103,37 @@ end
 puts ""
 
 require 'date'
-def days_until_wedding()
-  date_of_wedding = Date.new(2013,9,27)
-  date_today = Date.today()
-  julian_day_wedding = date_of_wedding.jd()
-  julian_day_today = date_today.jd()
-  
-  days_remaining = julian_day_wedding - julian_day_today
-  return days_remaining
+def wedding(x)
+	date_of_wedding = Date.new(2013,9,27)
+	date_today = Date.today()
+	julian_day_wedding = date_of_wedding.jd()
+	julian_day_today = date_today.jd()
+	wedding_location = "Stillwater Ranch"
+	
+	days_remaining = julian_day_wedding - julian_day_today
+	if x == 1
+		return days_remaining
+	elsif x == 2
+		return date_of_wedding
+	elsif x == 3
+		return wedding_location
+	else
+		return "Invalid results."
+	end
 end
+
 
 def wedding_program_message1()
 	options_message = "---[ What would you like to know about the wedding? ]---"
 	options_array = [ 
 		"1) How many more days until the wedding?",
 		"2) What day is the wedding?",
-		"3) Should we postpone the wedding?",
+		"3) Where will the wedding be?",
 		"4) Exit program." ]
 	puts options_message
 	puts options_array
 end
+
 
 loop_the_program = 1
 while loop_the_program == 1
@@ -131,11 +142,11 @@ while loop_the_program == 1
 	options_choice = gets.to_i
 	
 	if options_choice == 1
-	  puts "Days until the wedding: " + days_until_wedding().to_s
+	  puts "Days until the wedding: " + wedding(1).to_s
 	elsif options_choice == 2
-	  puts "No function yet."
+	  puts "The day of the wedding is: " + wedding(2).to_s
 	elsif options_choice == 3
-	  puts "No function yet."
+	  puts "The location of the wedding will be: " + wedding(3)
 	elsif options_choice == 4
 	  loop_the_program = 0
 	else
