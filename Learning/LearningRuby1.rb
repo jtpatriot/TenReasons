@@ -1,7 +1,6 @@
 
 puts ""
-puts "---[ Learning Program ]---"
-puts ""
+puts "--------------------[ Learning Program ]--------------------"
 
 ##############################
 def new_function1()
@@ -19,7 +18,6 @@ end
 # also, comments seem to be the same, with pound symbols.
 new_function1()
 # puts new_function2()
-puts ""
 
 
 ##############################
@@ -95,8 +93,6 @@ include MyRubyLibrary
 itemVariable2 = MyRubyLibTestClass.new
 
 
-puts ""
-
 
 ##############################
 x = 0
@@ -107,9 +103,8 @@ if x = MyRubyModule.pass(MyRubyModule::CAN_I_PASS)
   puts y
 end
 
-
 puts ""
-
+puts ""
 
 ##############################
 require 'date'
@@ -137,7 +132,7 @@ end
 
 
 def wedding_program_message1()
-	options_message = "---[ What would you like to know about the wedding? ]---"
+	options_message = "-----[ What would you like to know about the wedding? ]-----"
 	options_array = [ 
 		"1) How many more days until the wedding?",
 		"2) What day is the wedding?",
@@ -150,6 +145,11 @@ def wedding_program_message1()
 end
 
 
+def wedding_loop_end()
+	puts "------------------------------------------------------------"
+	puts ""
+	puts ""
+end
 
 
 program_loop = 1
@@ -164,9 +164,7 @@ while program_loop == 1
 	  program_loop = 0
 	end
 	
-	puts "--------------------------------------------------------"
-	puts ""
-	puts ""
+	wedding_loop_end()
 end
 
 
