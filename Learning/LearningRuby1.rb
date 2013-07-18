@@ -140,8 +140,10 @@ def wedding_program_message1()
 		"1) How many more days until the wedding?",
 		"2) What day is the wedding?",
 		"3) Where will the wedding be?",
-		"4) Exit program." ]
+		"4) Exit program."
+	]
 	puts options_message
+	puts "There are " + options_array.length.to_s + " options."
 	puts options_array
 end
 
@@ -155,8 +157,6 @@ while loop_the_program == 1
 	
 	if options_choice == 4
 	  loop_the_program = 0
-	else
-	  loop_the_program = 1
 	end
 	
 	puts ""
