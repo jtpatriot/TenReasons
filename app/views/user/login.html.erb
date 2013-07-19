@@ -1,17 +1,13 @@
 <h1>Login</h1>
 
-
   <% if flash[:message] %>
   <div><%= flash[:message] %></div>
   <% end %>
-  
   <% if flash[:error] %>
   <div><%= flash[:error] %></div>
   <% end %>
 
-
-  <%= form_tag :action => 'process_login'
-%>
-   Username: <%= text_field "user", "username" %>&#x00A;
-    Password: <%= password_field "user", "password" %>&#x00A;
-    <%= submit_tag %>
+  <%= form_tag('/user/my_account', method: :get) %>
+  <p>Username: <%= text_field "user", "username" %></p>
+  <p>Password: <%= password_field "user", "password" %></p>
+  <%= submit_tag(value = "Submit") %>
