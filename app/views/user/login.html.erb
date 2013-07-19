@@ -1,13 +1,21 @@
-<h1>User#login</h1>
-<p>Find me in app/views/user/login.html.erb</p>
+<div class="HeaderBox">
+  <div class="HeaderText"><h1><%= "Ten Reasons" %></h1></div>
+  <div class="NavigateBar"><ul>
+    <a href="/"><li>Home</li></a>
+    <a href="/reasons/"><li>Reasons</li></a>
+    <a href="/user/login"><li>Login</li></a>
+  </ul></div>
+</div>
+
+<h1>Login</h1>
 
 
-  <% if @flash[:message] %>
-  <div><%= @flash[:message] %></div>
+  <% if flash[:message] %>
+  <div><%= flash[:message] %></div>
   <% end %>
   
-  <% if @flash[:error] %>
-  <div><%= @flash[:error] %></div>
+  <% if flash[:error] %>
+  <div><%= flash[:error] %></div>
   <% end %>
 
 
@@ -16,4 +24,3 @@
    Username: <%= text_field "user", "username" %>&#x00A;
     Password: <%= password_field "user", "password" %>&#x00A;
     <%= submit_tag %>
-  <%= end_form_tag %> 
