@@ -16,7 +16,7 @@ end
 
 # puts is like print in python, though I think print works as well.
 # also, comments seem to be the same, with pound symbols.
-new_function1()
+# new_function1()
 # puts new_function2()
 
 

@@ -6,8 +6,8 @@ body{background:#FFFFFF;}
 
 h1,h2,h3,h4,h5,h6{font-family: 'Lato',Helvetica,Arial,sans-serif; font-weight:300; color:#203870;}
 
-.HeaderBox{width:940px; height:60px; border-bottom: #203870 2px solid; margin-bottom:32px;}
-.HeaderText{float:left;}
+.HeaderBox{min-width:640px; height:72px; border-bottom: #203870 2px solid; margin-bottom:32px;}
+.HeaderText{float:left; padding-top: 12px;}
 .HeaderText h1{font-size:3em;}
 
 .HeaderRight{float: right; width:400px; height: 60px;}
@@ -21,10 +21,10 @@ h1,h2,h3,h4,h5,h6{font-family: 'Lato',Helvetica,Arial,sans-serif; font-weight:30
 }
 .NavigateBar li:hover{background:#203870; color:#ffffff}
 
-.UserLogin{float: right; width: 300px; height: 20px;}
+.UserLogin{float: right; width: 300px; height: 32px; z-index: 2000;}
 .UserLogin p{font-size: 11px; text-align: right;}
 
-.Content{background:#FFFFFF; width:940px; margin:0px auto 16px auto; padding:16px 16px 16px 16px; clear:both;}
+.Content{background:#FFFFFF; min-width:640px; margin:0px auto 16px auto; padding:16px 16px 16px 16px; clear:both;}
 .Content td{font-family: 'Open Sans',Helvetica,Arial,sans-serif; font-weight:400; color:#000000;}
 
 .RightPadding{padding-right:48px;}
