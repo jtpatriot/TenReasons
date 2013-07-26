@@ -22,8 +22,6 @@ class UserController < ApplicationController
   end
 
   def my_account
-    @user = User.new
-    @user.username = params[:username]
   end
   
 end

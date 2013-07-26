@@ -169,7 +169,8 @@ end
 
 
 
-
+# Add another program for password generation.
+# Also one for chat that is encrypted.
 
 
 

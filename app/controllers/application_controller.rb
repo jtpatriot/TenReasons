@@ -7,7 +7,12 @@ class ApplicationController < ActionController::Base
   
   protected
   def set_user
-    @user = User.find(session[:id]) if @user.nil? && session[:id]
+    if @user.nil? && session[:id]
+      @user = User.find(session[:id])
+      @username = "Not logged in"
+    else
+      @username = "Logged in"
+    end
   end
 
   def login_required
